@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imprimir Panfletos – várias cópias da imagem na folha | Programa grátis para Windows</title>
+<meta name="description" content="Programa gratuito para Windows que coloca várias cópias de uma imagem na mesma folha (A4, A3, A5, Carta, Ofício) para imprimir panfletos, cartões e etiquetas. Salva em PDF e Word.">
+<link rel="canonical" href="https://vmarc-apps.github.io/imprimir-panfletos-releases/">
+<link rel="icon" type="image/svg+xml" href="icone.svg">
+<meta name="theme-color" content="#7C3AED">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Imprimir Panfletos – várias cópias da imagem na folha">
+<meta property="og:description" content="Escolha a imagem, diga quantas cópias quer e o programa distribui tudo na folha. Grátis para Windows.">
+<meta property="og:url" content="https://vmarc-apps.github.io/imprimir-panfletos-releases/">
+<meta property="og:image" content="https://vmarc-apps.github.io/imprimir-panfletos-releases/img/mesa.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Imprimir Panfletos",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "inLanguage": "pt-BR",
+  "description": "Programa gratuito que distribui várias cópias de uma imagem na folha para imprimir panfletos, cartões e etiquetas, ou salvar em PDF e Word.",
+  "downloadUrl": "https://github.com/VMARC-APPS/imprimir-panfletos-releases/releases/latest/download/ImprimirPanfletos-Setup.exe",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+  "publisher": { "@type": "Organization", "name": "VMARC" }
+}
+</script>
+<style>
+:root {
+  --bg: #F6F4FB; --surface: #FFFFFF; --soft: #EDE7FD; --text: #1E1A2E; --muted: #5E5778;
+  --primary: #7C3AED; --primary-hover: #6D28D9; --on-primary: #FFFFFF; --border: #E4DFF0;
+  --shadow: 0 10px 40px rgba(60, 30, 120, .14);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #13101E; --surface: #1D1930; --soft: #31275A; --text: #EEEAFB; --muted: #B2ABCC;
+    --primary: #A78BFA; --primary-hover: #B9A2FC; --on-primary: #1B1033; --border: #36305A;
+    --shadow: 0 10px 40px rgba(0, 0, 0, .5);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+a { color: var(--primary); }
+.wrap { width: min(1080px, 100% - 32px); margin: 0 auto; }
+header { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+header .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+.marca img { width: 32px; height: 32px; }
+nav { margin-left: auto; display: flex; gap: 20px; align-items: center; }
+nav a { text-decoration: none; color: var(--muted); font-size: 15px; }
+nav a:hover { color: var(--text); }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: var(--on-primary); text-decoration: none; font-weight: 700; padding: 14px 26px; border-radius: 14px; font-size: 17px; box-shadow: 0 6px 20px color-mix(in srgb, var(--primary) 40%, transparent); transition: background .15s, transform .05s; }
+.btn:hover { background: var(--primary-hover); }
+.btn:active { transform: translateY(1px); }
+.btn.pequeno { padding: 9px 16px; font-size: 14px; border-radius: 10px; box-shadow: none; }
+.hero { padding: 64px 0 40px; text-align: center; }
+.hero h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.12; letter-spacing: -.02em; margin: 0 auto 16px; max-width: 18ch; }
+.hero h1 span { color: var(--primary); }
+.hero p.sub { font-size: clamp(17px, 2.2vw, 20px); color: var(--muted); max-width: 60ch; margin: 0 auto 28px; }
+.nota { font-size: 14px; color: var(--muted); margin-top: 14px; }
+.tela { margin: 44px auto 0; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); max-width: 980px; background: var(--surface); }
+.tela img { display: block; width: 100%; height: auto; }
+section { padding: 56px 0; }
+h2 { font-size: clamp(24px, 3.4vw, 34px); letter-spacing: -.01em; margin: 0 0 10px; }
+.lead { color: var(--muted); max-width: 62ch; margin: 0 0 32px; }
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.cartao { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+.cartao h3 { margin: 0 0 6px; font-size: 17px; }
+.cartao p { margin: 0; color: var(--muted); font-size: 15px; }
+.passos { counter-reset: p; display: grid; gap: 14px; padding: 0; list-style: none; }
+.passos li { counter-increment: p; display: flex; gap: 16px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; }
+.passos li::before { content: counter(p); flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--soft); color: var(--primary); font-weight: 800; }
+.passos b { display: block; }
+.passos span { color: var(--muted); font-size: 15px; }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.duas img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; margin-bottom: 10px; }
+summary { cursor: pointer; font-weight: 700; padding: 14px 0; }
+details p { margin: 0 0 16px; color: var(--muted); }
+.cta { text-align: center; background: var(--soft); border-radius: 24px; padding: 48px 24px; }
+.cta p { color: var(--muted); }
+footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 24px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+@media (max-width: 760px) { .duas { grid-template-columns: 1fr; } nav a:not(.btn) { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="marca" href="#"><img src="icone.svg" alt="" width="32" height="32">Imprimir Panfletos</a>
+    <nav>
+      <a href="#recursos">Recursos</a>
+      <a href="#como-usar">Como usar</a>
+      <a href="#perguntas">Perguntas</a>
+      <a class="btn pequeno" href="https://github.com/VMARC-APPS/imprimir-panfletos-releases/releases/latest/download/ImprimirPanfletos-Setup.exe">Baixar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Várias cópias da sua imagem <span>na mesma folha</span></h1>
+      <p class="sub">Escolha a imagem, diga quantas cópias quer e o programa distribui tudo na folha, no tamanho certo, pronto para imprimir e recortar. Sem brigar com o Word.</p>
+      <a class="btn" href="https://github.com/VMARC-APPS/imprimir-panfletos-releases/releases/latest/download/ImprimirPanfletos-Setup.exe">⬇ Baixar grátis para Windows</a>
+      <p class="nota">Windows 10 ou 11 (64 bits) · sem precisar de administrador · atualiza sozinho</p>
+      <div class="tela"><img src="img/mesa.jpg" width="1400" height="843" alt="Tela do Imprimir Panfletos mostrando um panfleto repetido quatro vezes numa folha A4, com linhas de corte"></div>
+    </div>
+  </div>
+
+  <section id="recursos">
+    <div class="wrap">
+      <h2>Feito para quem imprime panfleto, cartão e etiqueta</h2>
+      <p class="lead">Gráficas rápidas, comércios, escolas, igrejas e eventos: qualquer um que precise de várias cópias pequenas numa mesma folha.</p>
+      <div class="grade">
+        <div class="cartao"><h3>Distribui sozinho</h3><p>Escolha a quantidade (de 1 a 100) e veja a folha na hora. O programa calcula a melhor distribuição e o máximo que cabe.</p></div>
+        <div class="cartao"><h3>Qualquer imagem</h3><p>JPG, PNG, WEBP, BMP, TIFF, GIF, AVIF e HEIC (as fotos do iPhone). Gire e corte só o detalhe que quiser.</p></div>
+        <div class="cartao"><h3>Várias folhas</h3><p>A4, A3, A5, Carta, Ofício ou tamanho personalizado, em pé ou deitada, com margens seguras para a impressora.</p></div>
+        <div class="cartao"><h3>Aproveita o espaço</h3><p>“Estender imagens” ocupa a folha inteira, deformando só um pouco, sem cortar nada. Ou defina o tamanho em centímetros.</p></div>
+        <div class="cartao"><h3>Linhas de corte</h3><p>Guias entre as imagens para a tesoura ou a guilhotina, quando você quiser.</p></div>
+        <div class="cartao"><h3>Imprime ou salva</h3><p>Imprime em tamanho real pela janela de impressão do Windows, ou salva em PDF e em Word (.docx).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-usar">
+    <div class="wrap duas">
+      <div>
+        <h2>Como usar</h2>
+        <p class="lead">Quatro passos, sem configuração.</p>
+        <ol class="passos">
+          <li><div><b>Escolha a imagem</b><span>Arraste para a janela, clique em “Escolher imagem” ou cole com Ctrl+V.</span></div></li>
+          <li><div><b>Gire e corte</b><span>Se quiser só um detalhe, ajuste na hora e clique em OK.</span></div></li>
+          <li><div><b>Diga quantas cópias</b><span>A folha se organiza sozinha e mostra como vai sair.</span></div></li>
+          <li><div><b>Imprima ou salve</b><span>Direto na impressora, ou em PDF ou Word.</span></div></li>
+        </ol>
+      </div>
+      <img src="img/editor.jpg" width="1400" height="843" alt="Janela de ajuste da imagem, com giro de 90 graus e corte livre">
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap duas">
+      <img src="img/mesa-escuro.jpg" width="1400" height="843" alt="Imprimir Panfletos no modo escuro">
+      <div>
+        <h2>Leve, simples e com modo escuro</h2>
+        <p class="lead">Um programa pequeno, direto ao ponto, que abre rápido e lembra as suas escolhas de folha e margem. Aparece em modo claro ou escuro, como você preferir.</p>
+        <p class="lead"><b>Suas imagens ficam no seu computador.</b> O programa não envia nada para a internet. Leia a <a href="privacidade.html">política de privacidade</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="perguntas">
+    <div class="wrap">
+      <h2>Perguntas frequentes</h2>
+      <p class="lead">&nbsp;</p>
+      <details><summary>É gratuito?</summary><p>Sim. O Imprimir Panfletos é de uso gratuito.</p></details>
+      <details><summary>O Windows mostrou “O Windows protegeu o seu PC”. É seguro?</summary><p>Esse aviso aparece para programas novos que ainda não têm uma assinatura digital paga. Clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>. O instalador vem direto deste endereço do GitHub, e o programa só verifica atualizações assinadas pelo desenvolvedor.</p></details>
+      <details><summary>Funciona com a minha impressora?</summary><p>Com qualquer impressora já instalada no Windows. O programa abre a janela de impressão do próprio Windows, onde você escolhe a impressora e o papel.</p></details>
+      <details><summary>Precisa de internet?</summary><p>Só para baixar e para verificar atualizações. Para montar e imprimir, não.</p></details>
+      <details><summary>Quais tamanhos de imagem funcionam?</summary><p>Imagens de até 200 MB. Fotos muito grandes (acima de 5000 pixels) são reduzidas sem perda visível para a impressão.</p></details>
+      <details><summary>Como atualizo?</summary><p>O programa avisa quando há versão nova e atualiza sozinho. Você também pode baixar o instalador de novo e instalar por cima.</p></details>
+      <details><summary>Tem versão para celular?</summary><p>Uma versão para Android está nos planos.</p></details>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>Pronto para imprimir?</h2>
+        <p>Baixe, instale e monte o seu primeiro panfleto em menos de um minuto.</p>
+        <a class="btn" href="https://github.com/VMARC-APPS/imprimir-panfletos-releases/releases/latest/download/ImprimirPanfletos-Setup.exe">⬇ Baixar grátis para Windows</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 VMARC · Imprimir Panfletos</span>
+    <span><a href="privacidade.html">Privacidade</a> · <a href="https://github.com/VMARC-APPS/imprimir-panfletos-releases/releases">Todas as versões</a> · <a href="https://github.com/VMARC-APPS/imprimir-panfletos-releases/issues">Relatar um problema</a></span>
+  </div>
+</footer>
+</body>
+</html>
