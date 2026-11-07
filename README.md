@@ -48,4 +48,6 @@ Abra uma [Issue](https://github.com/VMARC-APPS/imprimir-panfletos-releases/issue
 
 ---
 
+Site: https://vmarc-apps.github.io/imprimir-panfletos-releases/ · [Política de privacidade](https://vmarc-apps.github.io/imprimir-panfletos-releases/privacidade.html)
+
 Feito por **VMARC**. Uso gratuito. Este repositório contém apenas os instaladores e o arquivo de versões do programa.
